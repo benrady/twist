@@ -46,6 +46,10 @@ setup(
     ],
     package_data={
         'twisted': ['plugins/twist_plugin.py'],
-    })
+    },
+    data_files=[
+      ('/etc/init.d', ['deb/init.d/twist']),
+      ('/etc/twist', ['deb/twist.conf'])
+    ])
 
 refresh_plugin_cache()
